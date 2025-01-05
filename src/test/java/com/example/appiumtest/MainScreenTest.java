@@ -86,7 +86,7 @@ public class MainScreenTest {
 
     @Test
     public void checkToolBarTextIsCorrect() {
-        String expectedText = "Календарь Clever";
+        String expectedText = "Календарь Clever ";
         String actualText = MainScreen.checkToolBarText();
         assertEquals(expectedText, actualText, "Текст не совпадают");
     }

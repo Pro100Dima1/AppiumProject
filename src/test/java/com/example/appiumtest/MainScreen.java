@@ -5,8 +5,10 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.LoggerFactory;
 
 public class MainScreen {
+    private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(MainScreen.class));
 
     @AndroidFindBy(xpath = "\t\n" +
             "//android.widget.ImageButton[@content-desc=\"Следующий месяц\"]")
@@ -41,46 +43,56 @@ public class MainScreen {
     private WebElement toolBarText;
 
     public boolean checkNextMonth() {
+        LOG.info("Переход на страницу Get Started");
         return nextMonth.isEnabled();
     }
 
     public boolean checkPastMonth() {
+        LOG.info("Переход на страницу Get Started");
         return pastMonth.isEnabled();
     }
 
     public boolean checkHeadWidget() {
+        LOG.info("Переход на страницу Get Started");
         return headWidget.isEnabled();
     }
 
     public boolean checkLayoutCalendar() {
+        LOG.info("Переход на страницу Get Started");
         return layoutCalendar.isEnabled();
     }
 
     public boolean checkHeadData() {
+        LOG.info("Переход на страницу Get Started");
         return headData.isEnabled();
     }
 
     public boolean checkToolBar() {
+        LOG.info("Переход на страницу Get Started");
         return toolBar.isEnabled();
     }
 
     public boolean checkToolBarIsClickable() {
+        LOG.info("Переход на страницу Get Started");
         toolBar.click();
         return banner.isEnabled();
     }
 
     public boolean checkRateTheApp() {
+        LOG.info("Переход на страницу Get Started");
         toolBar.click();
         return rateTheApp.isEnabled();
     }
 
     public boolean checkRateTheAppIsClickable() {
+        LOG.info("Переход на страницу Get Started");
         toolBar.click();
         rateTheApp.click();
         return estimation.isEnabled();
     }
 
     public String checkToolBarText() {
+        LOG.info("Переход на страницу Get Started");
         toolBar.click();
         return toolBarText.getText();
     }
